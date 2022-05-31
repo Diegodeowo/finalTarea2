@@ -14,6 +14,7 @@ Employee::Employee(int IDEmployee, string& employeeName, int IDSupervisor, strin
 
 }
 
+
 Employee::~Employee(){
 
     for (Employee* child : this->children)

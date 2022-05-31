@@ -21,8 +21,8 @@ test1:
 	g++ $(FLAGS) src/spreadsheet.cpp -o bin/spreadsheet.o
 	g++ $(FLAGS) src/main.cpp -o bin/main.o
 
-	g++ $(FLAGS) test/testNominaHoras.cpp -o bin/testNominaHoras.o
-	g++ -g -o bin/tests1 bin/testNominaHoras.o  bin/employee.o bin/fileReader.o bin/makeSpreadsheet.o bin/spreadsheet.o -lgtest -lgtest_main -lpthread
+	g++ $(FLAGS) test/test_Nomina_Horas_Empleados.cpp -o bin/test_Nomina_Horas_Empleados.o
+	g++ -g -o bin/tests1 bin/test_Nomina_Horas_Empleados.o  bin/employee.o bin/fileReader.o bin/makeSpreadsheet.o bin/spreadsheet.o -lgtest -lgtest_main -lpthread
 
 
 
