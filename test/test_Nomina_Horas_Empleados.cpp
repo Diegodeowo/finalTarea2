@@ -1,6 +1,5 @@
 #include <gtest/gtest.h>
 
-#include "../src/makeSpreadsheet.h"
 #include "../src/employee.h"
 #include "../src/fileReader.h"
 #include "../src/spreadsheet.h"
@@ -38,4 +37,17 @@ namespace
 
         EXPECT_EQ(expected, current);
     }
-}
+
+    TEST(TEST_EMPLOYEE, TEST_GET_SUPERVISOR_NAME){
+
+    string name = "Diego Soto";
+    string name2 = "Armando Soto";
+
+    Employee *e1Name = new Employee(111, name, 1, name2, 1, 1);
+    string current = e1Name->getSupervisorName(e1Name);
+    string expected = "Armando Soto";
+
+    EXPECT_EQ(expected, current);
+
+    }
+}  

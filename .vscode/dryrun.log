@@ -1,11 +1,4 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/diego/Desktop/finalTarea2-main'
-mkdir -p bin
-g++ -g -c --std=c++17 src/employee.cpp -o bin/employee.o
-g++ -g -c --std=c++17 src/fileReader.cpp -o bin/fileReader.o
-g++ -g -c --std=c++17 src/makeSpreadsheet.cpp -o bin/makeSpreadsheet.o	
-g++ -g -c --std=c++17 src/spreadsheet.cpp -o bin/spreadsheet.o
-g++ -g -c --std=c++17 src/main.cpp -o bin/main.o
-g++ -g -o bin/a bin/employee.o bin/fileReader.o bin/makeSpreadsheet.o bin/spreadsheet.o bin/main.o
-make: Leaving directory '/home/diego/Desktop/finalTarea2-main'
- 
+make.exe --dry-run --always-make --keep-going --print-directory
+"make.exe" no se reconoce como un comando interno o externo,
+programa o archivo por lotes ejecutable.
+

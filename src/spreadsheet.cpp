@@ -1,20 +1,22 @@
 #include <map>
 #include <string>
 #include <sstream>
-
+#include <iostream>
+#include <fstream>
 #include "spreadsheet.h"
 #include "employee.h"
 
 using namespace std;
 
-
+Spreadsheet::Spreadsheet(string fileName, Spreadsheet *tree){
+    this->fileName = fileName;
+    this->tree = tree;
+}
 Spreadsheet::Spreadsheet(){
-    
     this->root = nullptr;
 }
 
 Spreadsheet::~Spreadsheet(){
-
     if (this->root != nullptr){
         delete this->root;
     }
@@ -38,6 +40,14 @@ void Spreadsheet::AddNode(int IDEmployee, string employeeName, int IDSupervisor,
     this->data.insert(pair < int,Employee *> (IDEmployee, node));
 }
 
+int Spreadsheet::OutputSpreadsheet(){
+    ofstream output(fileName);
+    output << *tree;
+    output.close();
+
+    return 0;
+}
+
 ostream& operator << (ostream &o, const Spreadsheet &tree){
 
     Employee* root = tree.root;
@@ -45,6 +55,7 @@ ostream& operator << (ostream &o, const Spreadsheet &tree){
 
     return o;
 }
+
 
 istream& operator >> (istream &i, Spreadsheet &tree){
     string line {""};
