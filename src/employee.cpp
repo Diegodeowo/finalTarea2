@@ -36,6 +36,12 @@ string Employee::getEmployeeName(Employee *node){
 
 }
 
+string Employee::getSupervisorName(Employee *node){
+
+    return Employee::supervisorName;
+
+}
+
 void Employee::AddSupervisorName(Employee *node, Employee *parentNode){
 
     string supervisorName = parentNode->employeeName;

@@ -24,6 +24,7 @@ class Employee{
         void AddSupervisorName(Employee *employee, Employee *employeeParent);
 
         string getEmployeeName(Employee *employee);
+        string getSupervisorName(Employee *employee);
 
         friend ostream& operator << (ostream &o, const Employee &Employee);
 };

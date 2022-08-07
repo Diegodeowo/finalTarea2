@@ -17,7 +17,6 @@
 
 #include "../src/fileReader.h"
 #include "../src/spreadsheet.h"
-#include "../src/makeSpreadsheet.h"
 
 using namespace std;
 
@@ -28,7 +27,7 @@ int main() {
     Spreadsheet *tree = new Spreadsheet();
     tree = file1->getTree();
 
-    MakeSpreadsheet output("Reporte.csv", tree);
+    Spreadsheet output("Reporte.csv", tree);
     output.OutputSpreadsheet();
 
     return 0;
